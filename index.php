@@ -22,7 +22,7 @@
 	<body>
 			<div class="filemanager">
 			<div class="search">
-				<input type="search" placeholder="Find a file.." />
+				<input type="search" placeholder="파일 찾기.." />
 			</div>
 			<div class="breadcrumbs"></div>
 			<a class="button folderName" id="backButton" href=""><i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back</a>
@@ -31,7 +31,7 @@
 			<ul class="data"></ul>
 			<div class="nothingfound">
 				<div class="nofiles"></div>
-				<span>No files here.</span>
+				<span>아무것도 없어요.</span>
 			</div>
 				
 			</div>
