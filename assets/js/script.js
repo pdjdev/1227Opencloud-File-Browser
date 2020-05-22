@@ -393,7 +393,7 @@ $(function(){
 
 			if(filemanager.hasClass('searching')){
 
-				url = '<span>Search results: </span>';
+				url = '<span>: </span>';
 				fileList.removeClass('animated');
 
 			}
