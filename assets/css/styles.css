@@ -19,15 +19,15 @@ html {
     /* Full height */
     height: 100%; 
 	/* The image used */
-    background-image: url("../../images/background.jpg");
+    background-image: url("../../images/background.png");
     
-    background-color: #373743;
+    background-color: #161C23;
     /* Center and scale the image nicely */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
-	font: 14px normal Arial, Helvetica, sans-serif;
+	font: 14px Roboto, Noto Sans CJK, normal Arial, Helvetica, sans-serif;
 	z-index: -4;
 }
 
@@ -44,7 +44,7 @@ html {
 	margin: 100px auto 50px;
 }
 
-@media all and (max-width: 965px) {
+@media all and (max-width: 1450px) {
 	.filemanager {
 		margin: 30px auto 0;
 		padding: 1px;
@@ -60,7 +60,7 @@ html {
 .filemanager .breadcrumbs {
 	color: #ffffff;
 	margin-left:20px;
-	font-size: 13px;
+	font-size: 18px;
 	font-weight: 700;
 	line-height: 35px;
 }
@@ -174,9 +174,9 @@ html {
 
 .filemanager .data li {
 	border-radius: 3px;
-	background-color: #373743;
-	width: 307px;
-	height: 118px;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 650px;
+	height: 98px;
 	list-style-type: none;
 	margin: 10px;
 	display: inline-block;
@@ -190,7 +190,7 @@ html {
 }
 
 .filemanager .data li:hover {
-	background-color: #42424E;
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
 .filemanager .data li a {
@@ -206,29 +206,31 @@ html {
 	font-size: 15px;
 	font-weight: 700;
 	line-height: 20px;
-	width: 150px;
+	width: calc(100% - 110px);
 	white-space: nowrap;
-	display: inline-block;
+	display: table-cell;
 	position: absolute;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	top: 40px;
+	top: 30px;
+	left: 100px;
 }
 
 .filemanager .data li .details {
 	color: #b6c1c9;
 	font-size: 13px;
 	font-weight: 400;
-	width: 55px;
+	width: calc(100% - 110px);
 	height: 10px;
-	top: 64px;
+	top: 54px;
 	white-space: nowrap;
 	position: absolute;
-	display: inline-block;
+	display: table-cell;
+	left: 100px;
 }
 
 .filemanager .nothingfound {
-	background-color: #373743;
+	background-color: #2B3644;
 	border-radius: 10px;
 	width: 23em;
 	height: 21em;
@@ -269,7 +271,7 @@ html {
 	top: 2em;
 }
 
-@media all and (max-width:965px) {
+@media all and (max-width:1450px) {
 
 	.filemanager .data li {
 		width: 100%;
@@ -296,7 +298,7 @@ html {
 -------------------------*/
 
 .icon {
-	font-size: 23px;
+	font-size: 20px;
 }
 .icon.folder {
 	display: inline-block;
@@ -624,16 +626,16 @@ footer #tzine-actions iframe{
 }
 
 .button {
-    background-color: #373743; 
+    background-color: rgba(0, 0, 0, 0.6);
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 1px;
     margin-left: 10px;
     margin-top:40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    width: 200px;
+    width: 130px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 3px;
@@ -643,9 +645,9 @@ footer #tzine-actions iframe{
 }
 
 .button:hover {
-	background-color: #42424E;
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
 .fancybox-content {
-	min-height: 700px;
+	min-height: 400px;
 }
