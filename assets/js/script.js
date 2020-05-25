@@ -297,28 +297,12 @@ $(function(){
 					var itemsLength = f.items.length,
 						name = escapeHTML(f.name),
 						
-						icon = '<span class="icon folder"></span>',
-						iconpath = 'images/icons/' + f.path + '.png';
+						icon = '<span class="icon folder"></span>';
 					
-					
-					function imageExists(image_url){
-
-						var http = new XMLHttpRequest();
-
-						http.open('HEAD', image_url, false);
-						http.send();
-
-						return http.status != 404;
-
-					}
-					
-					if (imageExists(iconpath)) {
-						icon = '<div style="display:inline-block;margin:5px 5px 5px 5px;border-radius:8px;width:100px;height:100px;background-position: center center;background-size: cover; background-repeat:no-repeat;background-image: url(\'' +iconpath + '\');"></div>';
-					} else if(itemsLength) {
+					if(itemsLength) {
 						icon = '<span class="icon folder full"></span>';
 					}
-					
-					
+
 
 					if(itemsLength == 1) {
 						itemsLength += ' item';
@@ -376,7 +360,11 @@ $(function(){
 					} else if (fileType == "pdf") {
 						var file = $('<li class="files"><a data-fancybox data-type="iframe" data-src="'+ f.path+'" title="'+ f.path +'" href="javascript:;" class="files">'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>');
 					} else if (fileType == "mp4") {
-						var file = $('<li class="files"><a data-fancybox data-type="iframe" data-src="'+ f.path+'" title="'+ f.path +'" href="javascript:;" class="files">'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>');
+						var file = $('<li class="files"><a data-fancybox data-type="iframe" data-src="'+ f.path+'" title="'+ f.path +'" class="files" style>'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>');						
+					} else if (fileType == "m4a") {
+						var file = $('<li class="files"><a data-fancybox data-type="iframe" data-src="'+ f.path+'" title="'+ f.path +'" class="files" style>'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>');
+					} else if (fileType == "htm") {
+						var file = $('<li class="files"><a data-fancybox data-type="iframe" data-src="'+ f.path+'" title="'+ f.path +'" class="files" style>'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>');
 					} else {
 						var file = $('<li class="files"><a href="'+ f.path+'" title="'+ f.path +'" target="_blank" class="files">'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>');
 					}
